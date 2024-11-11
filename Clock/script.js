@@ -7,49 +7,14 @@ const setClock = () => {
 	let day = new Date();
 	let hh = day.getHours() * 30;
 	let mm = day.getMinutes() * deg;
-	let ss = day.getSeconds() * deg;
-
+	let ss = day.getSeconds() * deg + (day.getMilliseconds() / 1000) * deg;
 	hour.style.transform = `rotateZ(${hh + mm / 12}deg)`;
 	min.style.transform = `rotateZ(${mm}deg)`;
 	sec.style.transform = `rotateZ(${ss}deg)`;
 };
 
 setClock();
-setInterval(setClock, 1000);
-
-/* FOR JS LOCAL STORAGE SETTINGS
-let touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
-
-window.addEventListener(touchEvent, mode);
-
-function mode() {
-	const currentTheme = localStorage.getItem('clock-data-theme');
-	console.log(currentTheme);
-	if (currentTheme == 'dark') {
-		light();
-	} else {
-		dark();
-	}
-}
-
-function light() {
-	localStorage.setItem('clock-data-theme', 'light');
-	document.documentElement.setAttribute('clock-data-theme', 'light');
-}
-
-function dark() {
-	localStorage.setItem('clock-data-theme', 'dark');
-	document.documentElement.setAttribute('clock-data-theme', 'dark');
-}
-
-let currentTheme = localStorage.getItem('clock-data-theme');
-
-if (currentTheme == 'light') {
-	light();
-} else {
-	dark();
-}
-*/
+setInterval(setClock, 20);
 
 // DYNAMIC THEME SETTINGS BASED ON OS PREFERENCE
 
