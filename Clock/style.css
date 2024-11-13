@@ -67,7 +67,6 @@ body {
 	display: flex;
 	justify-content: center;
 	border-radius: 50%;
-	transition: transform 0.1s linear; /* 添加平滑过渡效果 */
 }
 
 .hour {

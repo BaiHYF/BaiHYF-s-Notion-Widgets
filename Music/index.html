@@ -1,0 +1,38 @@
+<html> 
+<head>
+    <title>Greeting Message</title> 
+    <style>
+#lbl {
+    font-family: 'Lucida Calligraphy', cursive;
+    /* font-family: monospace ;*/
+    font-size: xx-large;
+    color: black;
+    padding: 5px;
+    border: 1px solid grey;
+    text-align: center;
+    line-height: 1.5;
+    height:85%
+}
+#date{
+    font-size:large;
+}
+body{
+    background-color: white;
+}
+    </style>
+</head>
+<body>
+    <div id="lbl"></div>
+    <audio controls>
+        <source src="Music/src/mp3/Guiano_月 .mp3" type="audio/mpeg">
+        Audio Failed.
+    </audio>
+</body>
+
+<script>
+    var name = 'Guiano_Moon'
+    var greet = 'Music';
+    document.getElementById('lbl').innerHTML =
+        greet+=`<div id="name">${name}</div>`;
+</script> 
+</html>
