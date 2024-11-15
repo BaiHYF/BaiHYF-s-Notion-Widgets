@@ -7,7 +7,29 @@
     margin: 0;
     background-color: white;
   }
-  
+  /* 小屏幕设备（如手机） */
+  @media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+  }
+
+  /* 大屏幕设备（如桌面） */
+  @media (min-width: 601px) {
+    body {
+        font-size: 16px;
+    }
+    .container {
+        width: 80%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+  }
   #app-cover {
     position: absolute;
     top: 50%;
@@ -166,9 +188,10 @@
     position: relative;
     height: 100%;
     background-color: #fff;
-    box-shadow: 0 30px 80px #656565;
+    box-shadow: 0 30px 80px white;
     border-radius: 15px;
     z-index: 2;
+    border: 1px solid #000; /* 添加边框 */
   }
   
   #album-art {
