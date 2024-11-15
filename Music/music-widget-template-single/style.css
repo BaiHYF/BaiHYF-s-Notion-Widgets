@@ -47,6 +47,7 @@
   #player {
     position: relative;
     height: 100%;
+    width: 380px;
     z-index: 3;
   }
   
@@ -55,7 +56,7 @@
     top: 0;
     right: 15px;
     left: 15px;
-    padding: 13px 22px 10px 184px;
+    padding: 13px 22px 10px 10px;
     background-color: white;
     border-radius: 15px 15px 0 0;
     transition: 0.3s ease top;
@@ -67,15 +68,18 @@
   }
   
   #album-name {
-    color: #54576f;
+    color: #4c4e5c;
     font-size: 17px;
     font-weight: bold;
+    margin-left: 145px;
   }
   
   #track-name {
-    color: #acaebd;
-    font-size: 13px;
+    color: #000000;
+    font-size: 14px;
     margin: 2px 0 13px 0;
+    margin-left: 145px;
+    font-family: Georgia, serif;
   }
   
   #track-time {
@@ -86,6 +90,7 @@
   
   #current-time {
     float: left;
+    margin-left: 145px;
   }
   
   #track-length {
@@ -117,6 +122,7 @@
   #s-area {
     background-color: whitesmoke;
     cursor: pointer;
+    margin-left: 145px;
   }
   
   #ins-time {
@@ -269,7 +275,7 @@
   #player-controls {
     width: 250px;
     height: 100%;
-    margin: 0 5px 0 141px;
+    margin: 0 -30px 0 150px;
     float: right;
     overflow: hidden;
   }
