@@ -169,6 +169,7 @@
             authorEl.textContent = author;
             const sentenceEl = document.getElementById('sentence');
             const poemLines = content.match(/[^、，；。！？\s]+[、，；。！？\s]?/g);
+            poemLines.reverse();
             sentenceEl.innerHTML = '';
             poemLines.forEach((line, index) => {
                 const lineContainer = document.createElement('div');
